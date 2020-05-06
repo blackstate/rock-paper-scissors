@@ -58,13 +58,25 @@
     }
     
     function game() {
+
+        
         for (i=0; i<5;i++) {
-            console.log(playRound(prompt("What is your move?"), computerSelection));
+
+            playerSelection = prompt("What is your move?").toLowerCase();
+
+            if (MOVES.includes(playerSelection) == true){
+                console.log(playRound(playerSelection, computerSelection));
+            }
+            
+            else {
+                console.log('Invalid move! Please try again.')
+            }
+
         }
     }
 
     game();
-    
+
   </script>
 </body>
 </html>
