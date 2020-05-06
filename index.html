@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    const MOVES = ["rock", "paper", "scissors"];
+
+    function computerPlay() {
+    return MOVES[Math.floor(Math.random() * MOVES.length)];
+    }
+
+    //const playerSelection = 'rock'
+    const computerSelection = computerPlay()
+
+    function playRound(player,computer) {
+
+        if (player == computer) 
+        {
+            return `Its a tie! both moves are ${player}`;
+        }
+
+        else if (player == "rock") 
+        {
+            if (computer == "paper") {
+                return `You Lose! ${computer} beats ${player}`;
+            }
+
+            else {
+                return `You win! ${player} beats ${computer}`;
+            }
+        }
+
+        else if (player =="paper") 
+        {
+            if (computer == "scissors") {
+                return `You Lose! ${computer} beats ${player}`;
+            }
+            
+            else {
+                return `You win! ${player} beats ${computer}`;
+            }
+        }
+
+        else if (player =="scissors") 
+        {
+            if (computer == "rock") {
+                return `You Lose! ${computer} beats ${player}`;
+            }
+            
+            else {
+                return `You win! ${player} beats ${computer}`;
+            }
+        }
+
+    }
+    
+    function game() {
+        for (i=0; i<5;i++) {
+            console.log(playRound(prompt("What is your move?"), computerSelection));
+        }
+    }
+
+    game();
+    
+  </script>
+</body>
+</html>
