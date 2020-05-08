@@ -1,0 +1,98 @@
+body {
+    background-color: #293044;
+    font-family: 'Roboto Mono', monospace;
+    color: #BAEE75;
+}
+rect.btn {
+    stroke:#fff;
+    fill:#fff;
+    fill-opacity:0;
+    stroke-opacity:0;
+  }
+.player-moves {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{ 
+    display: block;
+    font-size: 1.8em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h4{
+    display: block;
+    font-size: 0.9em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-bottom: 10px;
+}
+
+.player-moves-label {
+    text-align: center;
+}
+.moves { 
+    transition: all 0.2s ease;
+}
+
+.opponent {
+    text-align: center;
+    color: #75eede;
+    
+}
+.robot {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+header{
+    margin-top: 50px;
+    text-align: center;
+}
+
+div.result>p {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin: 0px 15px 0px 15px;
+    padding: 20px 20px 20px 20px;
+}
+
+
+.enlarge {
+    transform: scale(1.2);
+}
+
+.scores {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
