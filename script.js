@@ -10,6 +10,16 @@ let computerScore = 0;
 let playerScore = 0;
 let firstRound = true;
 
+const rockButton = document.querySelector('#rock');
+const paperButton = document.querySelector('#paper');
+const scissorsButton = document.querySelector('#scissors');
+
+const rockSVG = document.querySelector('#rocksvg')
+const paperSVG = document.querySelector('#papersvg')
+const scissorsSVG = document.querySelector('#scissorssvg')
+
+const robotSVG = document.querySelector('#robotsvg')
+
 function computerPlay() {
     return MOVES[Math.floor(Math.random() * MOVES.length)];
 }
@@ -30,6 +40,8 @@ function checkFirst() {
 function addComputer() {
 
     checkFirst();
+
+    robotSVG.classList.add('enlarge');
 
     computerText.innerHTML = "";
     computerText.appendChild(computerScoreText);
@@ -116,16 +128,10 @@ function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
     e.target.classList.remove('enlarge');
   }
+
 const svg = Array.from(document.querySelectorAll('svg'));
 svg.forEach(svg => svg.addEventListener('transitionend', removeTransition));
 
-const rockButton = document.querySelector('#rock');
-const paperButton = document.querySelector('#paper');
-const scissorsButton = document.querySelector('#scissors');
-
-const rockSVG = document.querySelector('#rocksvg')
-const paperSVG = document.querySelector('#papersvg')
-const scissorsSVG = document.querySelector('#scissorssvg')
 
 rockButton.onclick = function(){
     game('rock');
