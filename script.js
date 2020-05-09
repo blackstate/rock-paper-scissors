@@ -138,11 +138,11 @@ rockButton.onclick = function(){
     rockSVG.classList.add('enlarge');
 };
 paperButton.onclick = function(){
-    game('rock');
+    game('paper');
     paperSVG.classList.add('enlarge');
 };
 scissorsButton.onclick = function(){
-    game('rock')
+    game('scissors')
     scissorsSVG.classList.add('enlarge');
 };
 
